@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOST ALL SOSMED BY RAKA | Boss Alsosmed Viralka</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                    },
+                    colors: {
+                        ivoryBg: '#FAF6F0',
+                        cardSurface: '#FFFFFF',
+                        charcoalInk: '#1C1917',
+                        mutedStone: '#57534E',
+                        classicGold: '#B45309',
+                        creamSoft: '#F3ECE1',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-8px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-ivoryBg text-charcoalInk font-sans antialiased selection:bg-amber-800 selection:text-white overflow-x-hidden">
+
+    <!-- Ambient Decorative Background -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-amber-200/40 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/3 -right-40 w-96 h-96 bg-stone-300/40 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-40 left-1/3 w-96 h-96 bg-amber-100/50 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Custom Toast / Message Box (Pengganti alert) -->
+    <div id="toast-notification" class="fixed bottom-24 right-5 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-stone-900 border border-amber-500/60 text-amber-50 px-5 py-4 rounded-2xl shadow-2xl flex items-center gap-3 max-w-sm">
+            <div class="w-9 h-9 rounded-xl bg-amber-700 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-check text-white"></i>
+            </div>
+            <div>
+                <h4 id="toast-title" class="font-serif font-bold text-sm text-amber-300">Berhasil!</h4>
+                <p id="toast-message" class="text-xs text-stone-200 mt-0.5">Format pesanan siap dikirim.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1. NAVBAR / HEADER -->
+    <header class="sticky top-0 z-40 bg-ivoryBg/95 backdrop-blur-md border-b border-stone-300/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 gap-2">
+                <!-- Brand Logo -->
+                <a href="#beranda" class="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+                    <div class="w-10 h-10 rounded-xl bg-stone-900 border border-amber-600 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-crown text-amber-400 text-base"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif font-extrabold text-sm sm:text-lg tracking-tight text-stone-900 block leading-none">
+                            BOOST ALL SOSMED
+                        </span>
+                        <span class="text-[10px] sm:text-[11px] font-bold tracking-[0.18em] text-amber-800 uppercase">
+                            BY RAKA • VIRALKA
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-6 text-sm font-semibold text-stone-700">
+                    <a href="#beranda" class="hover:text-amber-800 transition">Beranda</a>
+                    <a href="#tentang" class="hover:text-amber-800 transition">Tentang</a>
+                    <a href="#layanan" class="hover:text-amber-800 transition">Layanan</a>
+                    <a href="#testimoni-pembayaran" class="hover:text-amber-800 transition">Testimoni & Bayar</a>
+                    <a href="#order-form-section" onclick="scrollToOrderForm(event)" class="hover:text-amber-800 transition">Order</a>
+                </nav>
+
+                <!-- Right Action: Peraturan Order Widget + Order Button + Mobile Menu -->
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <button type="button" onclick="toggleRulesModal(true)" class="px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold text-amber-950 bg-amber-200 hover:bg-amber-300 border-2 border-amber-700/60 shadow-sm transition-all flex items-center gap-1.5 sm:gap-2 cursor-pointer">
+                        <i class="fa-solid fa-scroll text-amber-800"></i>
+                        <span>Peraturan Order</span>
+                    </button>
+
+                    <a href="#order-form-section" onclick="scrollToOrderForm(event)" class="hidden sm:inline-flex items-center px-4 py-2.5 rounded-xl text-sm font-bold text-amber-50 bg-stone-900 hover:bg-amber-900 border border-amber-700/40 shadow-md transition-all">
+                        <i class="fa-solid fa-feather-pointed mr-1.5 text-amber-400"></i> Order Sekarang
+                    </a>
+
+                    <button id="mobile-menu-btn" type="button" aria-label="Buka Menu" class="lg:hidden p-2.5 rounded-xl bg-creamSoft border border-stone-300 text-stone-800 hover:bg-stone-200 transition">
+                        <i id="menu-icon" class="fa-solid fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-cardSurface border-b border-stone-300 px-4 pt-3 pb-6 space-y-2 shadow-lg">
+            <a href="#beranda" class="mobile-link block px-4 py-3 rounded-xl text-sm font-medium text-stone-800 hover:bg-creamSoft hover:text-amber-800">Beranda</a>
+            <a href="#tentang" class="mobile-link block px-4 py-3 rounded-xl text-sm font-medium text-stone-800 hover:bg-creamSoft hover:text-amber-800">Tentang Raka & Viralka</a>
+            <a href="#layanan" class="mobile-link block px-4 py-3 rounded-xl text-sm font-medium text-stone-800 hover:bg-creamSoft hover:text-amber-800">Katalog Layanan Utama</a>
+            <a href="#testimoni-pembayaran" class="mobile-link block px-4 py-3 rounded-xl text-sm font-medium text-stone-800 hover:bg-creamSoft hover:text-amber-800">Testimoni & Metode Pembayaran</a>
+            <button type="button" onclick="toggleRulesModal(true)" class="mobile-link w-full text-left px-4 py-3 rounded-xl text-sm font-bold text-amber-950 bg-amber-100 border border-amber-700/40 flex items-center gap-2">
+                <i class="fa-solid fa-scroll text-amber-800"></i> Peraturan Order & Komplain
+            </button>
+            <div class="pt-2">
+                <a href="#order-form-section" onclick="scrollToOrderForm(event)" class="mobile-link block w-full text-center px-5 py-3.5 rounded-xl text-sm font-bold text-amber-50 bg-stone-900 hover:bg-amber-900 shadow-md">
+                    <i class="fa-solid fa-feather-pointed mr-1.5 text-amber-400"></i> Buat Format Order
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MODAL PERATURAN SEBELUM ORDER & KOMPLAIN -->
+    <div id="rules-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-stone-950/65 backdrop-blur-sm">
+        <div class="bg-cardSurface border-2 border-amber-700/60 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
+            <div class="flex items-start justify-between gap-4 pb-4 border-b border-stone-200">
+                <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-2xl bg-stone-900 border border-amber-500 flex items-center justify-center text-amber-400 shrink-0">
+                        <i class="fa-solid fa-scroll text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-bold uppercase tracking-widest text-amber-800 block">Wajib Dibaca</span>
+                        <h3 class="font-serif text-xl sm:text-2xl font-extrabold text-stone-900">Peraturan Order & Komplain</h3>
+                    </div>
+                </div>
+                <button type="button" onclick="toggleRulesModal(false)" aria-label="Tutup Peraturan" class="p-2 rounded-xl bg-creamSoft hover:bg-stone-200 text-stone-700 transition cursor-pointer">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <div class="my-5 space-y-3 text-xs sm:text-sm text-stone-700 max-h-[62vh] overflow-y-auto pr-1">
+                <!-- Banner Literacy Before Ordering -->
+                <div class="p-4 rounded-2xl bg-stone-900 border border-amber-500/60 text-amber-50 shadow-md">
+                    <div class="text-center font-extrabold text-sm sm:text-base text-amber-300 tracking-wide">
+                        ❗LITERACY BEFORE ORDERING❗
+                    </div>
+                    <div class="text-center text-[10px] text-stone-400 overflow-hidden whitespace-nowrap my-1.5 select-none">
+                        𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃
+                    </div>
+                    <ul class="space-y-2 text-xs sm:text-sm font-bold text-amber-100 mt-2">
+                        <li>𓋰 PERMANENT (TERGANTUNG SERVER)❗</li>
+                        <li>𓋰 REFIL/NO REFIL (TERGANTUNG SERVER)❗</li>
+                        <li>𓋰 TF ➢ BUKTI TF ➢ LINK SOSMED ➢ PROSES❗</li>
+                        <li>𓋰 MAXIMAL 24 JAM❗</li>
+                        <li class="text-amber-300 pt-1">𓋰 ORDER = PAHAM ❗</li>
+                    </ul>
+                </div>
+
+                <!-- Peraturan Ketika Order -->
+                <div class="pt-1">
+                    <span class="inline-block px-3 py-1 rounded-lg bg-amber-100 text-amber-900 text-xs font-extrabold uppercase tracking-wider border border-amber-300 mb-2.5">
+                        <i class="fa-solid fa-clipboard-check mr-1"></i> Peraturan Ketika Order
+                    </span>
+                    <div class="space-y-2.5">
+                        <div class="p-3.5 rounded-2xl bg-ivoryBg border border-stone-200 flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-amber-800 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
+                            <p><strong class="text-stone-900">Akun Wajib Publik:</strong> Pastikan akun atau postingan target tidak dalam mode privat selama proses berjalan.</p>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-ivoryBg border border-stone-200 flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-amber-800 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
+                            <p><strong class="text-stone-900">Jangan Ganti Username / Hapus Link:</strong> Dilarang mengganti username atau menghapus postingan saat pesanan sedang dikerjakan.</p>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-ivoryBg border border-stone-200 flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-amber-800 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
+                            <p><strong class="text-stone-900">Periksa Link & Username:</strong> Kesalahan penulisan link/username oleh pembeli bukan tanggung jawab admin.</p>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-ivoryBg border border-stone-200 flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-amber-800 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">4</span>
+                            <p><strong class="text-stone-900">Hindari Order Ganda:</strong> Jangan memesan layanan yang sama di dua tempat berbeda untuk satu link/akun secara bersamaan.</p>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-ivoryBg border border-stone-200 flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-amber-800 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">5</span>
+                            <p><strong class="text-stone-900">Tanpa Password:</strong> Kami tidak pernah meminta password akun. Pesanan diproses setelah bukti transfer diterima.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Peraturan Komplain -->
+                <div class="pt-3 mt-3 border-t border-stone-200">
+                    <span class="inline-block px-3 py-1 rounded-lg bg-red-100 text-red-900 text-xs font-extrabold uppercase tracking-wider border border-red-200 mb-2.5">
+                        <i class="fa-solid fa-triangle-exclamation mr-1"></i> Peraturan Komplain
+                    </span>
+                    <div class="space-y-2.5">
+                        <div class="p-3.5 rounded-2xl bg-red-50/70 border border-red-200/80 flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-red-800 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
+                            <p><strong class="text-stone-900">Sertakan Bukti Lengkap:</strong> Lampirkan bukti transfer, username/link target, serta kondisi jumlah sebelum dan sesudah proses.</p>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-red-50/70 border border-red-200/80 flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-red-800 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
+                            <p><strong class="text-stone-900">Batas Estimasi Maksimal 24 Jam:</strong> Komplain pesanan belum masuk diajukan setelah melewati estimasi maksimal 24 jam.</p>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-red-50/70 border border-red-200/80 flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-red-800 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
+                            <p><strong class="text-stone-900">Ketentuan Refill / Drop:</strong> Refill hanya berlaku untuk server yang mendukung refill/permanen; paket no refill tidak mendapat garansi isi ulang.</p>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-red-50/70 border border-red-200/80 flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-red-800 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">4</span>
+                            <p><strong class="text-stone-900">Garansi Hangus Jika Melanggar Rules:</strong> Akun diprivat, username diganti, postingan dihapus, atau order ganda membuat komplain/garansi hangus.</p>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-red-50/70 border border-red-200/80 flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-red-800 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">5</span>
+                            <p><strong class="text-stone-900">Komunikasi Sopan:</strong> Ajukan komplain dengan bahasa sopan agar pengecekan ke server dapat diproses dengan lancar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-3 border-t border-stone-200 flex items-center justify-end gap-3">
+                <button type="button" onclick="toggleRulesModal(false)" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-stone-900 hover:bg-amber-900 text-amber-50 font-bold text-xs sm:text-sm transition shadow cursor-pointer">
+                    Saya Mengerti & Lanjut Order
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main class="relative z-10">
+
+        <!-- 2. HERO SECTION (BERANDA) -->
+        <section id="beranda" class="pt-14 pb-20 sm:pt-20 sm:pb-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-creamSoft border border-amber-700/30 text-amber-900 text-xs sm:text-sm font-semibold mb-6">
+                        <span class="w-2 h-2 rounded-full bg-amber-700"></span>
+                        Boost All Sosmed By Raka • Boss Alsosmed Viralka
+                    </div>
+
+                    <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-stone-900">
+                        BOOST ALL SOSMED <br class="hidden sm:inline">
+                        <span class="text-amber-800 italic">BY RAKA</span>
+                        <span class="font-sans block text-xl sm:text-2xl lg:text-3xl mt-4 font-bold text-stone-700">
+                            Solusi Elegan & Terpercaya untuk Meningkatkan Engagement Akunmu
+                        </span>
+                    </h1>
+
+                    <!-- Dynamic Tagline Box -->
+                    <div class="mt-5 p-4 rounded-2xl bg-creamSoft/90 border border-amber-700/30 shadow-sm max-w-2xl mx-auto lg:mx-0">
+                        <div class="flex items-center justify-center lg:justify-start gap-2 text-xs font-bold uppercase tracking-wider text-amber-800 mb-1">
+                            <i class="fa-solid fa-fire-flame-curved"></i> Kenapa Harus Boost Sekarang?
+                        </div>
+                        <p id="dynamic-tagline" class="font-serif italic text-base sm:text-lg font-bold text-stone-900 transition-opacity duration-500">
+                            "Akun Sepi Bikin Pembeli Ragu? Sulap Jadi Ramai & Terpercaya dalam Hitungan Menit!"
+                        </p>
+                    </div>
+
+                    <p class="mt-5 text-base sm:text-lg text-stone-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Tingkatkan kredibilitas akun <strong class="text-stone-900">TikTok, YouTube, Instagram, Lazada, Shopee, Twitter, Spotify, Tokopedia, dan Facebook</strong>. Layanan <strong class="text-amber-800">Followers, Like, View, Subscriber, Jam Tayang, Komentar, Share/Save, Live Viewers, dan Spotify Plays</strong> tanpa password.
+                    </p>
+
+                    <!-- Primary & Secondary CTA Buttons -->
+                    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="https://whatsapp.com/channel/0029Vb8u9a3JJhzUkhZtXm3T" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-7 py-4 rounded-2xl text-sm sm:text-base font-bold text-amber-50 bg-stone-900 hover:bg-amber-900 border border-amber-700/40 shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2.5">
+                            <i class="fa-brands fa-whatsapp text-xl text-emerald-400"></i>
+                            Cek Daftar Harga di Saluran WA
+                        </a>
+                        <a href="#order-form-section" onclick="scrollToOrderForm(event)" class="w-full sm:w-auto px-7 py-4 rounded-2xl text-sm sm:text-base font-bold text-stone-900 bg-cardSurface hover:bg-creamSoft border border-stone-300 shadow-sm transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane text-amber-800"></i>
+                            Buat Format Order
+                        </a>
+                    </div>
+
+                    <!-- Highlight Stats -->
+                    <div class="mt-12 grid grid-cols-3 gap-3 sm:gap-6 pt-8 border-t border-stone-300">
+                        <div class="bg-cardSurface border border-stone-200 rounded-2xl p-3 sm:p-4 text-center lg:text-left shadow-sm">
+                            <div class="font-serif text-lg sm:text-2xl font-extrabold text-amber-800">100%</div>
+                            <div class="text-xs sm:text-sm text-stone-600 font-medium mt-0.5">Real Testimoni</div>
+                        </div>
+                        <div class="bg-cardSurface border border-stone-200 rounded-2xl p-3 sm:p-4 text-center lg:text-left shadow-sm">
+                            <div class="font-serif text-lg sm:text-2xl font-extrabold text-stone-900">24 Jam</div>
+                            <div class="text-xs sm:text-sm text-stone-600 font-medium mt-0.5">Estimasi Proses</div>
+                        </div>
+                        <div class="bg-cardSurface border border-stone-200 rounded-2xl p-3 sm:p-4 text-center lg:text-left shadow-sm">
+                            <div class="font-serif text-lg sm:text-2xl font-extrabold text-amber-800">9+</div>
+                            <div class="text-xs sm:text-sm text-stone-600 font-medium mt-0.5">Platform Didukung</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Preview Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md animate-float">
+                        <div class="relative bg-cardSurface border-2 border-stone-300 rounded-3xl p-6 sm:p-7 shadow-xl">
+                            <div class="flex items-center justify-between pb-5 border-b border-stone-200">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-11 h-11 rounded-2xl bg-stone-900 border border-amber-600 flex items-center justify-center text-amber-400 font-serif font-bold text-lg shadow">
+                                        R
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-stone-900 text-sm sm:text-base">Boss Alsosmed Viralka</h3>
+                                        <p class="text-xs text-emerald-700 font-medium flex items-center gap-1">
+                                            <i class="fa-solid fa-circle-check"></i> By Raka • Layanan Aktif
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold border border-amber-300">
+                                    VERIFIED
+                                </span>
+                            </div>
+
+                            <div class="my-6 space-y-4">
+                                <div class="bg-ivoryBg border border-stone-200 rounded-2xl p-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center">
+                                            <i class="fa-solid fa-user-plus text-lg"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs text-stone-500">Followers</p>
+                                            <p class="text-sm sm:text-base font-bold text-stone-900">Biasa • Indonesia • Permanen</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-lg">
+                                        Ready
+                                    </span>
+                                </div>
+
+                                <div class="bg-ivoryBg border border-stone-200 rounded-2xl p-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-xl bg-stone-200 text-rose-700 flex items-center justify-center">
+                                            <i class="fa-solid fa-heart text-lg"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs text-stone-500">Like Postingan</p>
+                                            <p class="text-sm sm:text-base font-bold text-stone-900">Biasa • Indonesia • Permanen</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-lg">
+                                        Fast
+                                    </span>
+                                </div>
+
+                                <div class="bg-ivoryBg border border-stone-200 rounded-2xl p-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center">
+                                            <i class="fa-solid fa-eye text-lg"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs text-stone-500">Views Video</p>
+                                            <p class="text-sm sm:text-base font-bold text-stone-900">Biasa • Indonesia • Permanen</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-bold text-amber-900 bg-amber-100 px-2.5 py-1 rounded-lg">
+                                        Boost
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- All 9 Supported Platforms -->
+                            <div class="pt-4 border-t border-stone-200">
+                                <span class="font-semibold text-xs text-stone-600 block mb-2.5">Platform Didukung:</span>
+                                <div class="flex flex-wrap items-center gap-2 text-xs font-semibold text-stone-800">
+                                    <span class="px-2.5 py-1 rounded-lg bg-ivoryBg border border-stone-200 flex items-center gap-1.5"><i class="fa-brands fa-tiktok"></i> TikTok</span>
+                                    <span class="px-2.5 py-1 rounded-lg bg-ivoryBg border border-stone-200 flex items-center gap-1.5"><i class="fa-brands fa-youtube text-red-700"></i> YouTube</span>
+                                    <span class="px-2.5 py-1 rounded-lg bg-ivoryBg border border-stone-200 flex items-center gap-1.5"><i class="fa-brands fa-instagram text-amber-800"></i> Instagram</span>
+                                    <span class="px-2.5 py-1 rounded-lg bg-ivoryBg border border-stone-200 flex items-center gap-1.5"><i class="fa-brands fa-facebook text-blue-700"></i> Facebook</span>
+                                    <span class="px-2.5 py-1 rounded-lg bg-ivoryBg border border-stone-200 flex items-center gap-1.5"><i class="fa-brands fa-x-twitter"></i> Twitter</span>
+                                    <span class="px-2.5 py-1 rounded-lg bg-ivoryBg border border-stone-200 flex items-center gap-1.5"><i class="fa-brands fa-spotify text-emerald-700"></i> Spotify</span>
+                                    <span class="px-2.5 py-1 rounded-lg bg-orange-50 text-orange-900 border border-orange-200">Shopee</span>
+                                    <span class="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-900 border border-emerald-200">Tokopedia</span>
+                                    <span class="px-2.5 py-1 rounded-lg bg-blue-50 text-blue-900 border border-blue-200">Lazada</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAGLINE STRIP -->
+        <section class="py-5 bg-stone-900 border-y border-amber-700/50 text-amber-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs sm:text-sm font-semibold tracking-wide text-center">
+                    <span class="flex items-center gap-2 text-amber-300"><i class="fa-solid fa-bolt"></i> "TF ➢ BUKTI TF ➢ LINK SOSMED ➢ PROSES"</span>
+                    <span class="hidden sm:inline text-stone-600">•</span>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-shield-check text-emerald-400"></i> "100% Aman Tanpa Password Akun"</span>
+                    <span class="hidden md:inline text-stone-600">•</span>
+                    <span class="flex items-center gap-2 text-amber-300"><i class="fa-solid fa-clock"></i> "Estimasi Maksimal 24 Jam"</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. TENTANG -->
+        <section id="tentang" class="py-20 px-4 sm:px-6 lg:px-8 border-t border-stone-200 bg-creamSoft/70">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-5">
+                        <div class="bg-cardSurface border border-stone-300 rounded-3xl p-7 sm:p-8 shadow-md">
+                            <div class="w-16 h-16 rounded-2xl bg-stone-900 border border-amber-600 flex items-center justify-center text-amber-400 text-2xl font-bold shadow mb-6">
+                                <i class="fa-solid fa-user-shield"></i>
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold text-stone-900 mb-1">Boost All Sosmed By Raka</h3>
+                            <p class="text-sm text-amber-800 font-semibold mb-4">Juga Dikenal Sebagai Boss Alsosmed Viralka</p>
+                            <p class="text-stone-600 text-sm sm:text-base leading-relaxed mb-6">
+                                Layanan peningkatan interaksi media sosial dan e-commerce untuk kreator, UMKM, serta penjual online. Cukup kirimkan username atau link target tanpa perlu memberikan password akun.
+                            </p>
+                            <div class="space-y-3 text-sm text-stone-800">
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-shield-halved text-emerald-700"></i>
+                                    <span>Tanpa Password & Privasi Terjaga</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-scroll text-amber-800"></i>
+                                    <span>Alur Jelas & Ketentuan Server Transparan</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-brands fa-whatsapp text-emerald-600"></i>
+                                    <span>Pemesanan Langsung ke WhatsApp Resmi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 space-y-6">
+                        <div>
+                            <span class="text-xs font-bold tracking-widest uppercase text-amber-800">Cakupan Platform & Layanan</span>
+                            <h2 class="font-serif text-2xl sm:text-4xl font-extrabold text-stone-900 mt-2">
+                                Dukungan Lengkap Media Sosial & Marketplace
+                            </h2>
+                            <p class="text-stone-600 mt-3 text-sm sm:text-base leading-relaxed">
+                                Melayani kebutuhan pertumbuhan akun di <strong class="text-stone-900">TikTok, YouTube, Instagram, Lazada, Shopee, Twitter, Spotify, Tokopedia, dan Facebook</strong> dengan pilihan paket yang dapat disesuaikan dengan kebutuhan server masing-masing.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="bg-cardSurface border border-stone-200 rounded-2xl p-5 shadow-sm">
+                                <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center mb-3">
+                                    <i class="fa-solid fa-users"></i>
+                                </div>
+                                <h4 class="font-bold text-stone-900 text-base">Followers Multi-Opsi</h4>
+                                <p class="text-xs sm:text-sm text-stone-600 mt-1">
+                                    Tersedia pilihan Followers Biasa, Followers Indonesia, dan Followers Permanen sesuai ketersediaan server.
+                                </p>
+                            </div>
+                            <div class="bg-cardSurface border border-stone-200 rounded-2xl p-5 shadow-sm">
+                                <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center mb-3">
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                                <h4 class="font-bold text-stone-900 text-base">Like & Views Terukur</h4>
+                                <p class="text-xs sm:text-sm text-stone-600 mt-1">
+                                    Tersedia Like Biasa, Like Indonesia, Like Permanen serta View Biasa, View Indonesia, dan Views Permanen.
+                                </p>
+                            </div>
+                            <div class="bg-cardSurface border border-stone-200 rounded-2xl p-5 shadow-sm">
+                                <div class="w-10 h-10 rounded-xl bg-red-100 text-red-700 flex items-center justify-center mb-3">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </div>
+                                <h4 class="font-bold text-stone-900 text-base">Subscriber, Jam Tayang & Interaksi</h4>
+                                <p class="text-xs sm:text-sm text-stone-600 mt-1">
+                                    Dukungan Subscriber & Jam Tayang YouTube, Komentar, Share/Save, Live Viewers, serta Spotify Plays.
+                                </p>
+                            </div>
+                            <div class="bg-cardSurface border border-stone-200 rounded-2xl p-5 shadow-sm">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-3">
+                                    <i class="fa-solid fa-wallet"></i>
+                                </div>
+                                <h4 class="font-bold text-stone-900 text-base">Pembayaran E-Wallet Praktis</h4>
+                                <p class="text-xs sm:text-sm text-stone-600 mt-1">
+                                    Pembayaran mudah melalui DANA, ShopeePay, dan GoPay ke nomor resmi atas nama JEFRENO LIONEL RAKA.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. KATALOG LAYANAN UTAMA -->
+        <section id="layanan" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-creamSoft border border-amber-700/30 text-amber-900 text-xs font-bold uppercase tracking-widest mb-3">
+                    Katalog Layanan Utama
+                </span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-stone-900">
+                    Pilihan Layanan Lengkap All Sosmed
+                </h2>
+                <p class="text-stone-600 mt-3 text-sm sm:text-base">
+                    Klik tombol layanan pada kartu di bawah untuk langsung memilihnya di formulir pemesanan, atau cek daftar harga lengkap di saluran WhatsApp resmi.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+
+                <!-- Kartu 1: Followers -->
+                <div class="bg-cardSurface border border-stone-200 hover:border-amber-600 rounded-3xl p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-md">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-2xl bg-creamSoft text-amber-800 border border-stone-200 flex items-center justify-center">
+                                <i class="fa-solid fa-users text-xl"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold">FOLLOWERS</span>
+                        </div>
+
+                        <h3 class="font-serif text-2xl font-bold text-stone-900">Followers</h3>
+                        <p class="text-stone-600 text-sm mt-2">
+                            Pilihan <strong>Followers Biasa</strong>, <strong>Followers Indonesia</strong>, dan <strong>Followers Permanen</strong> untuk TikTok, Instagram, Facebook, Twitter, Shopee, Tokopedia, Lazada, dan Spotify.
+                        </p>
+
+                        <a href="https://whatsapp.com/channel/0029Vb8u9a3JJhzUkhZtXm3T" target="_blank" rel="noopener noreferrer" class="my-5 p-3.5 rounded-2xl bg-ivoryBg border border-stone-200 hover:border-amber-600 hover:bg-creamSoft transition flex items-center justify-between group">
+                            <div>
+                                <span class="text-[11px] text-stone-500 block">Saluran Daftar Harga</span>
+                                <span class="text-sm font-extrabold text-amber-800 group-hover:underline">Cek Pricelist di Saluran WA</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-amber-800"></i>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2">
+                        <button type="button" onclick="selectServiceAndScroll('Followers Biasa')" class="py-2.5 px-3 rounded-xl bg-stone-900 hover:bg-amber-900 text-amber-50 font-bold text-xs transition cursor-pointer">
+                            Followers Biasa
+                        </button>
+                        <button type="button" onclick="selectServiceAndScroll('Followers Indonesia')" class="py-2.5 px-3 rounded-xl bg-amber-800 hover:bg-amber-900 text-white font-bold text-xs transition cursor-pointer">
+                            Followers Indonesia
+                        </button>
+                        <button type="button" onclick="selectServiceAndScroll('Followers Permanen')" class="col-span-2 py-2.5 px-3 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs transition cursor-pointer">
+                            <i class="fa-solid fa-shield-check mr-1"></i> Followers Permanen
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Kartu 2: Like -->
+                <div class="bg-cardSurface border-2 border-amber-700 rounded-3xl p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-100 text-rose-700 border border-amber-300 flex items-center justify-center">
+                                <i class="fa-solid fa-heart text-xl"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-stone-900 text-amber-300 text-xs font-bold">LIKE</span>
+                        </div>
+
+                        <h3 class="font-serif text-2xl font-bold text-stone-900">Like</h3>
+                        <p class="text-stone-600 text-sm mt-2">
+                            Pilihan <strong>Like Biasa</strong>, <strong>Like Indonesia</strong>, dan <strong>Like Permanen</strong> untuk postingan, foto, video, dan Reels pada berbagai platform.
+                        </p>
+
+                        <a href="https://whatsapp.com/channel/0029Vb8u9a3JJhzUkhZtXm3T" target="_blank" rel="noopener noreferrer" class="my-5 p-3.5 rounded-2xl bg-creamSoft border border-amber-300 hover:border-amber-600 transition flex items-center justify-between group">
+                            <div>
+                                <span class="text-[11px] text-stone-600 block">Saluran Daftar Harga</span>
+                                <span class="text-sm font-extrabold text-amber-900 group-hover:underline">Cek Pricelist di Saluran WA</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-amber-900"></i>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2">
+                        <button type="button" onclick="selectServiceAndScroll('Like Biasa')" class="py-2.5 px-3 rounded-xl bg-stone-900 hover:bg-amber-900 text-amber-50 font-bold text-xs transition cursor-pointer">
+                            Like Biasa
+                        </button>
+                        <button type="button" onclick="selectServiceAndScroll('Like Indonesia')" class="py-2.5 px-3 rounded-xl bg-amber-800 hover:bg-amber-900 text-white font-bold text-xs transition cursor-pointer">
+                            Like Indonesia
+                        </button>
+                        <button type="button" onclick="selectServiceAndScroll('Like Permanen')" class="col-span-2 py-2.5 px-3 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs transition cursor-pointer">
+                            <i class="fa-solid fa-shield-check mr-1"></i> Like Permanen
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Kartu 3: View (Tanpa Paket Komplit) -->
+                <div class="bg-cardSurface border border-stone-200 hover:border-amber-600 rounded-3xl p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-md">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-2xl bg-creamSoft text-amber-800 border border-stone-200 flex items-center justify-center">
+                                <i class="fa-solid fa-eye text-xl"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold">VIEW</span>
+                        </div>
+
+                        <h3 class="font-serif text-2xl font-bold text-stone-900">View</h3>
+                        <p class="text-stone-600 text-sm mt-2">
+                            Pilihan <strong>View Biasa</strong>, <strong>View Indonesia</strong>, dan <strong>Views Permanen</strong> untuk video TikTok, YouTube, Instagram Reels, Facebook, dan lainnya.
+                        </p>
+
+                        <a href="https://whatsapp.com/channel/0029Vb8u9a3JJhzUkhZtXm3T" target="_blank" rel="noopener noreferrer" class="my-5 p-3.5 rounded-2xl bg-ivoryBg border border-stone-200 hover:border-amber-600 hover:bg-creamSoft transition flex items-center justify-between group">
+                            <div>
+                                <span class="text-[11px] text-stone-500 block">Saluran Daftar Harga</span>
+                                <span class="text-sm font-extrabold text-amber-800 group-hover:underline">Cek Pricelist di Saluran WA</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-amber-800"></i>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2">
+                        <button type="button" onclick="selectServiceAndScroll('View Biasa')" class="py-2.5 px-3 rounded-xl bg-stone-900 hover:bg-amber-900 text-amber-50 font-bold text-xs transition cursor-pointer">
+                            View Biasa
+                        </button>
+                        <button type="button" onclick="selectServiceAndScroll('View Indonesia')" class="py-2.5 px-3 rounded-xl bg-amber-800 hover:bg-amber-900 text-white font-bold text-xs transition cursor-pointer">
+                            View Indonesia
+                        </button>
+                        <button type="button" onclick="selectServiceAndScroll('Views Permanen')" class="col-span-2 py-2.5 px-3 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs transition cursor-pointer">
+                            <i class="fa-solid fa-shield-check mr-1"></i> Views Permanen
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Kartu 4: Subscriber & Jam Tayang YouTube -->
+                <div class="bg-cardSurface border border-stone-200 hover:border-amber-600 rounded-3xl p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-md">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-2xl bg-red-50 text-red-700 border border-red-200 flex items-center justify-center">
+                                <i class="fa-brands fa-youtube text-xl"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-red-100 text-red-900 text-xs font-bold">YOUTUBE</span>
+                        </div>
+
+                        <h3 class="font-serif text-2xl font-bold text-stone-900">Subscriber & Jam Tayang</h3>
+                        <p class="text-stone-600 text-sm mt-2">
+                            Layanan <strong>Subscriber YouTube</strong> dan <strong>Jam Tayang YouTube</strong> untuk membantu pengembangan channel secara bertahap dan terukur.
+                        </p>
+
+                        <a href="https://whatsapp.com/channel/0029Vb8u9a3JJhzUkhZtXm3T" target="_blank" rel="noopener noreferrer" class="my-5 p-3.5 rounded-2xl bg-ivoryBg border border-stone-200 hover:border-amber-600 hover:bg-creamSoft transition flex items-center justify-between group">
+                            <div>
+                                <span class="text-[11px] text-stone-500 block">Saluran Daftar Harga</span>
+                                <span class="text-sm font-extrabold text-amber-800 group-hover:underline">Cek Pricelist di Saluran WA</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-amber-800"></i>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2">
+                        <button type="button" onclick="selectServiceAndScroll('Subscriber YouTube')" class="py-2.5 px-3 rounded-xl bg-stone-900 hover:bg-amber-900 text-amber-50 font-bold text-xs transition cursor-pointer">
+                            Subscriber YT
+                        </button>
+                        <button type="button" onclick="selectServiceAndScroll('Jam Tayang YouTube')" class="py-2.5 px-3 rounded-xl bg-amber-800 hover:bg-amber-900 text-white font-bold text-xs transition cursor-pointer">
+                            Jam Tayang YT
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Kartu 5: Komentar & Share / Save -->
+                <div class="bg-cardSurface border border-stone-200 hover:border-amber-600 rounded-3xl p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-md">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-2xl bg-creamSoft text-amber-800 border border-stone-200 flex items-center justify-center">
+                                <i class="fa-solid fa-comments text-xl"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold">INTERAKSI</span>
+                        </div>
+
+                        <h3 class="font-serif text-2xl font-bold text-stone-900">Komentar & Share / Save</h3>
+                        <p class="text-stone-600 text-sm mt-2">
+                            Tambah <strong>Komentar Indonesia</strong> serta <strong>Share & Save</strong> pada postingan video atau foto untuk memperkuat interaksi akun.
+                        </p>
+
+                        <a href="https://whatsapp.com/channel/0029Vb8u9a3JJhzUkhZtXm3T" target="_blank" rel="noopener noreferrer" class="my-5 p-3.5 rounded-2xl bg-ivoryBg border border-stone-200 hover:border-amber-600 hover:bg-creamSoft transition flex items-center justify-between group">
+                            <div>
+                                <span class="text-[11px] text-stone-500 block">Saluran Daftar Harga</span>
+                                <span class="text-sm font-extrabold text-amber-800 group-hover:underline">Cek Pricelist di Saluran WA</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-amber-800"></i>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2">
+                        <button type="button" onclick="selectServiceAndScroll('Komentar Indonesia')" class="py-2.5 px-3 rounded-xl bg-stone-900 hover:bg-amber-900 text-amber-50 font-bold text-xs transition cursor-pointer">
+                            Komentar
+                        </button>
+                        <button type="button" onclick="selectServiceAndScroll('Share & Save')" class="py-2.5 px-3 rounded-xl bg-amber-800 hover:bg-amber-900 text-white font-bold text-xs transition cursor-pointer">
+                            Share & Save
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Kartu 6: Live Viewers & Spotify Plays -->
+                <div class="bg-cardSurface border border-stone-200 hover:border-amber-600 rounded-3xl p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-md">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center">
+                                <i class="fa-solid fa-tower-broadcast text-xl"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 text-xs font-bold">LIVE & SPOTIFY</span>
+                        </div>
+
+                        <h3 class="font-serif text-2xl font-bold text-stone-900">Live Viewers & Spotify Plays</h3>
+                        <p class="text-stone-600 text-sm mt-2">
+                            Dukungan <strong>Live Viewers</strong> saat siaran langsung maupun <strong>Spotify Plays</strong> untuk audio dan lagu.
+                        </p>
+
+                        <a href="https://whatsapp.com/channel/0029Vb8u9a3JJhzUkhZtXm3T" target="_blank" rel="noopener noreferrer" class="my-5 p-3.5 rounded-2xl bg-ivoryBg border border-stone-200 hover:border-amber-600 hover:bg-creamSoft transition flex items-center justify-between group">
+                            <div>
+                                <span class="text-[11px] text-stone-500 block">Saluran Daftar Harga</span>
+                                <span class="text-sm font-extrabold text-amber-800 group-hover:underline">Cek Pricelist di Saluran WA</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-amber-800"></i>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2">
+                        <button type="button" onclick="selectServiceAndScroll('Live Viewers')" class="py-2.5 px-3 rounded-xl bg-stone-900 hover:bg-amber-900 text-amber-50 font-bold text-xs transition cursor-pointer">
+                            Live Viewers
+                        </button>
+                        <button type="button" onclick="selectServiceAndScroll('Spotify Plays')" class="py-2.5 px-3 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs transition cursor-pointer">
+                            Spotify Plays
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. TESTIMONI, METODE PEMBAYARAN & FORMULIR PEMESANAN CEPAT -->
+        <section id="testimoni-pembayaran" class="py-20 px-4 sm:px-6 lg:px-8 bg-creamSoft/70 border-t border-stone-200">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-cardSurface border border-amber-700/30 text-amber-900 text-xs font-bold uppercase tracking-widest mb-3">
+                        Testimoni, Pembayaran & Order
+                    </span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-stone-900">
+                        Saluran Resmi, Transfer E-Wallet & Format Order
+                    </h2>
+                    <p class="text-stone-600 mt-3 text-sm sm:text-base">
+                        Ikuti alur <strong>TF ➢ BUKTI TF ➢ LINK SOSMED ➢ PROSES</strong> dan gunakan formulir di bawah untuk mengirim format pesanan ke WhatsApp resmi.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <!-- Left Column: Testimoni, Saluran, Kontak & Pembayaran E-Wallet -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <!-- Saluran Testimoni & Saluran Daftar Harga -->
+                        <div class="bg-cardSurface border border-stone-200 rounded-3xl p-6 shadow-md space-y-4">
+                            <h3 class="font-serif text-xl font-bold text-stone-900">Saluran WhatsApp Resmi</h3>
+
+                            <a href="https://whatsapp.com/channel/0029Vb9A9deJ3jv0q9ZrPV0F" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-4 p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200 hover:border-emerald-600 transition group">
+                                <div class="flex items-center gap-3.5">
+                                    <div class="w-11 h-11 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0">
+                                        <i class="fa-solid fa-star text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-stone-500">Saluran WhatsApp Testimoni</p>
+                                        <p class="text-sm font-extrabold text-stone-900 group-hover:text-emerald-800">100% Real Testimoni</p>
+                                    </div>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-emerald-700"></i>
+                            </a>
+
+                            <a href="https://whatsapp.com/channel/0029Vb8u9a3JJhzUkhZtXm3T" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-4 p-4 rounded-2xl bg-amber-50/80 border border-amber-200 hover:border-amber-700 transition group">
+                                <div class="flex items-center gap-3.5">
+                                    <div class="w-11 h-11 rounded-xl bg-stone-900 text-amber-400 flex items-center justify-center shrink-0">
+                                        <i class="fa-solid fa-tags text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-stone-500">Saluran WhatsApp Daftar Harga</p>
+                                        <p class="text-sm font-extrabold text-stone-900 group-hover:text-amber-800">Pricelist Lengkap & Update</p>
+                                    </div>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-amber-800"></i>
+                            </a>
+                        </div>
+
+                        <!-- Kontak Langsung WhatsApp & Gmail -->
+                        <div class="bg-cardSurface border border-stone-200 rounded-3xl p-6 shadow-md space-y-4">
+                            <h3 class="font-serif text-xl font-bold text-stone-900">Kontak Resmi</h3>
+
+                            <a href="https://api.whatsapp.com/send?phone=6283114501335" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-4 p-4 rounded-2xl bg-ivoryBg border border-stone-200 hover:border-emerald-600 transition group">
+                                <div class="flex items-center gap-3.5">
+                                    <div class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-stone-500">WhatsApp Resmi</p>
+                                        <p class="text-sm font-bold text-stone-900 group-hover:text-emerald-700">0831-1450-1335</p>
+                                    </div>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 group-hover:text-emerald-700"></i>
+                            </a>
+
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=boostsosmedbyraka@gmail.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-4 p-4 rounded-2xl bg-ivoryBg border border-stone-200 hover:border-amber-700 transition group">
+                                <div class="flex items-center gap-3.5">
+                                    <div class="w-11 h-11 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center shrink-0">
+                                        <i class="fa-solid fa-envelope text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-stone-500">Email / Gmail Resmi</p>
+                                        <p class="text-sm font-bold text-stone-900 group-hover:text-amber-800 break-all">boostsosmedbyraka@gmail.com</p>
+                                    </div>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 group-hover:text-amber-800"></i>
+                            </a>
+                        </div>
+
+                        <!-- Metode Pembayaran E-Wallet -->
+                        <div class="bg-cardSurface border-2 border-amber-700/40 rounded-3xl p-6 shadow-md space-y-4">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-serif text-xl font-bold text-stone-900">Metode Pembayaran E-Wallet</h3>
+                                <span class="px-2.5 py-1 rounded-lg bg-amber-100 text-amber-900 text-xs font-bold">RESMI</span>
+                            </div>
+
+                            <p class="text-xs sm:text-sm text-stone-600">
+                                Transfer pembayaran melalui <strong>DANA</strong>, <strong>ShopeePay</strong>, atau <strong>GoPay</strong> ke nomor berikut:
+                            </p>
+
+                            <div class="p-4 rounded-2xl bg-stone-900 text-amber-50 border border-amber-600/50 space-y-2">
+                                <div class="flex items-center justify-between gap-2">
+                                    <span class="text-xs uppercase tracking-wider text-amber-300 font-bold">Nomor E-Wallet</span>
+                                    <button type="button" onclick="copyPaymentNumber('0881026318770', 'E-Wallet')" class="px-3 py-1 rounded-lg bg-amber-600 hover:bg-amber-500 text-white text-xs font-bold transition cursor-pointer">
+                                        <i class="fa-regular fa-copy mr-1"></i> Salin Nomor
+                                    </button>
+                                </div>
+                                <p class="font-mono text-base sm:text-lg font-extrabold tracking-wider text-white">0881-0263-18770</p>
+                                <p class="text-xs text-amber-200 font-semibold">
+                                    Atas Nama: <span class="text-white font-bold">JEFRENO LIONEL RAKA</span>
+                                </p>
+                            </div>
+
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs font-bold">
+                                <div class="p-2.5 rounded-xl bg-blue-50 text-blue-900 border border-blue-200">DANA</div>
+                                <div class="p-2.5 rounded-xl bg-orange-50 text-orange-900 border border-orange-200">ShopeePay</div>
+                                <div class="p-2.5 rounded-xl bg-emerald-50 text-emerald-900 border border-emerald-200">GoPay</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Formulir Pemesanan Cepat -->
+                    <div id="order-form-section" class="lg:col-span-7 scroll-mt-24">
+                        <div class="bg-cardSurface border-2 border-stone-300 rounded-3xl p-6 sm:p-8 shadow-xl">
+                            <div class="flex items-center justify-between pb-5 mb-6 border-b border-stone-200">
+                                <div>
+                                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-stone-900">Formulir Pemesanan Cepat</h3>
+                                    <p class="text-xs sm:text-sm text-stone-500 mt-1">Format otomatis tersusun ke WhatsApp 0831-1450-1335</p>
+                                </div>
+                                <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">
+                                    <i class="fa-solid fa-bolt"></i> Fast Order
+                                </span>
+                            </div>
+
+                            <form id="order-form" class="space-y-5">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="service-type" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">
+                                            Pilih Jenis Layanan
+                                        </label>
+                                        <select id="service-type" class="w-full px-4 py-3.5 rounded-xl bg-ivoryBg border border-stone-300 text-stone-900 text-sm font-medium focus:outline-none focus:border-amber-700">
+                                            <option value="Followers Biasa">Followers Biasa</option>
+                                            <option value="Followers Indonesia">Followers Indonesia</option>
+                                            <option value="Followers Permanen">Followers Permanen</option>
+                                            <option value="Like Biasa">Like Biasa</option>
+                                            <option value="Like Indonesia">Like Indonesia</option>
+                                            <option value="Like Permanen">Like Permanen</option>
+                                            <option value="View Biasa">View Biasa</option>
+                                            <option value="View Indonesia">View Indonesia</option>
+                                            <option value="Views Permanen">Views Permanen</option>
+                                            <option value="Subscriber YouTube">Subscriber YouTube</option>
+                                            <option value="Jam Tayang YouTube">Jam Tayang YouTube</option>
+                                            <option value="Komentar Indonesia">Komentar Indonesia</option>
+                                            <option value="Share & Save">Share & Save</option>
+                                            <option value="Live Viewers">Live Viewers</option>
+                                            <option value="Spotify Plays">Spotify Plays</option>
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <label for="platform-type" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">
+                                            Pilih Platform
+                                        </label>
+                                        <select id="platform-type" class="w-full px-4 py-3.5 rounded-xl bg-ivoryBg border border-stone-300 text-stone-900 text-sm font-medium focus:outline-none focus:border-amber-700">
+                                            <option value="TikTok">TikTok</option>
+                                            <option value="YouTube">YouTube</option>
+                                            <option value="Instagram">Instagram</option>
+                                            <option value="Lazada">Lazada</option>
+                                            <option value="Shopee">Shopee</option>
+                                            <option value="Twitter">Twitter</option>
+                                            <option value="Spotify">Spotify</option>
+                                            <option value="Tokopedia">Tokopedia</option>
+                                            <option value="Facebook">Facebook</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="order-amount" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">
+                                            Jumlah / Paket
+                                        </label>
+                                        <input type="text" id="order-amount" placeholder="Contoh: 1000 Followers / 5000 Views" required class="w-full px-4 py-3.5 rounded-xl bg-ivoryBg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-amber-700">
+                                    </div>
+
+                                    <div>
+                                        <label for="target-link" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">
+                                            Username / Link Target (Tanpa Password)
+                                        </label>
+                                        <input type="text" id="target-link" placeholder="Contoh: @username atau https://..." required class="w-full px-4 py-3.5 rounded-xl bg-ivoryBg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-amber-700">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="order-notes" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">
+                                        Catatan Tambahan (Opsional)
+                                    </label>
+                                    <input type="text" id="order-notes" placeholder="Contoh: Pembayaran DANA / ShopeePay / GoPay" class="w-full px-4 py-3.5 rounded-xl bg-ivoryBg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-amber-700">
+                                </div>
+
+                                <!-- Live Format Preview -->
+                                <div class="p-4 rounded-2xl bg-ivoryBg border border-stone-300">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-xs font-bold text-stone-600 uppercase tracking-wider">Preview Format Pesan WhatsApp:</span>
+                                        <button type="button" id="copy-format-btn" class="text-xs font-bold text-amber-800 hover:text-amber-900 flex items-center gap-1 cursor-pointer">
+                                            <i class="fa-regular fa-copy"></i> Salin Format
+                                        </button>
+                                    </div>
+                                    <pre id="order-preview" class="text-xs text-stone-800 font-mono whitespace-pre-wrap leading-relaxed"></pre>
+                                </div>
+
+                                <button type="submit" class="w-full py-4 px-6 rounded-2xl bg-stone-900 hover:bg-amber-900 text-amber-50 font-extrabold text-sm sm:text-base shadow-lg transition-all flex items-center justify-center gap-2.5 cursor-pointer">
+                                    <i class="fa-brands fa-whatsapp text-xl text-emerald-400"></i>
+                                    Kirim Pesanan ke WhatsApp Raka
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-stone-900 text-stone-300 pt-14 pb-10 px-4 sm:px-6 lg:px-8 border-t border-amber-700/40">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-stone-800">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-stone-800 border border-amber-600 flex items-center justify-center">
+                            <i class="fa-solid fa-crown text-amber-400"></i>
+                        </div>
+                        <div>
+                            <span class="font-serif font-extrabold text-base text-amber-50 block leading-none">BOOST ALL SOSMED</span>
+                            <span class="text-[11px] font-bold tracking-[0.2em] text-amber-400 uppercase">BY RAKA • VIRALKA</span>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-stone-400 leading-relaxed">
+                        Boost All Sosmed By Raka (Boss Alsosmed Viralka). Layanan engagement all sosmed dan marketplace aman tanpa password.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-bold text-amber-50 text-base mb-4">Navigasi Cepat</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm">
+                        <li><a href="#beranda" class="hover:text-amber-400 transition">Beranda</a></li>
+                        <li><a href="#tentang" class="hover:text-amber-400 transition">Tentang</a></li>
+                        <li><a href="#layanan" class="hover:text-amber-400 transition">Katalog Layanan Utama</a></li>
+                        <li><a href="#testimoni-pembayaran" class="hover:text-amber-400 transition">Testimoni & Metode Pembayaran</a></li>
+                        <li><a href="#order-form-section" onclick="scrollToOrderForm(event)" class="hover:text-amber-400 transition">Formulir Pemesanan Cepat</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-bold text-amber-50 text-base mb-4">Kontak & Saluran</h4>
+                    <ul class="space-y-2.5 text-xs sm:text-sm">
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=6283114501335" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition flex items-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-emerald-400"></i> 0831-1450-1335
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=boostsosmedbyraka@gmail.com" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition flex items-center gap-2">
+                                <i class="fa-solid fa-envelope text-amber-400"></i> boostsosmedbyraka@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://whatsapp.com/channel/0029Vb8u9a3JJhzUkhZtXm3T" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition flex items-center gap-2">
+                                <i class="fa-solid fa-tags text-amber-400"></i> Saluran Daftar Harga
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://whatsapp.com/channel/0029Vb9A9deJ3jv0q9ZrPV0F" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition flex items-center gap-2">
+                                <i class="fa-solid fa-star text-emerald-400"></i> Saluran 100% Real Testimoni
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
+                <p>&copy; <span id="current-year"></span> <strong class="text-amber-50">BOOST ALL SOSMED BY RAKA</strong>. Hak Cipta Dilindungi.</p>
+                <p>E-Wallet: DANA • ShopeePay • GoPay (0881-0263-18770)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6283114501335?text=Halo%20Kak%20Raka%2C%20saya%20tertarik%20dengan%20layanan%20BOOST%20ALL%20SOSMED%20BY%20RAKA." target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp Raka" class="fixed bottom-5 right-5 z-40 flex items-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold px-4 py-3.5 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="hidden sm:inline text-sm pr-1">Chat Raka</span>
+    </a>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Rotator Tagline Otomatis
+            const taglines = [
+                '"Akun Sepi Bikin Pembeli Ragu? Sulap Jadi Ramai & Terpercaya dalam Hitungan Menit!"',
+                '"Jangan Biarkan Konten Bagusmu Tenggelam — Tingkatkan Interaksi Akunmu Sekarang!"',
+                '"Toko Online Ramai Followers & Likes = Calon Pembeli Langsung Yakin Checkout!"',
+                '"100% Aman Tanpa Password — Alur Jelas & Estimasi Proses Maksimal 24 Jam!"'
+            ];
+            let taglineIndex = 0;
+            const taglineEl = document.getElementById('dynamic-tagline');
+            if (taglineEl) {
+                setInterval(() => {
+                    taglineEl.classList.add('opacity-0');
+                    setTimeout(() => {
+                        taglineIndex = (taglineIndex + 1) % taglines.length;
+                        taglineEl.textContent = taglines[taglineIndex];
+                        taglineEl.classList.remove('opacity-0');
+                    }, 350);
+                }, 4000);
+            }
+
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden', !isHidden);
+                menuIcon.classList.toggle('fa-bars', !isHidden);
+                menuIcon.classList.toggle('fa-xmark', isHidden);
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                });
+            });
+
+            // Format Order Generator & Live Preview
+            const serviceSelect = document.getElementById('service-type');
+            const platformSelect = document.getElementById('platform-type');
+            const amountInput = document.getElementById('order-amount');
+            const targetInput = document.getElementById('target-link');
+            const notesInput = document.getElementById('order-notes');
+            const orderPreview = document.getElementById('order-preview');
+            const copyFormatBtn = document.getElementById('copy-format-btn');
+            const orderForm = document.getElementById('order-form');
+
+            function generateOrderText() {
+                const service = serviceSelect.value;
+                const platform = platformSelect.value;
+                const amount = amountInput.value.trim() || '[Isi Jumlah / Paket]';
+                const target = targetInput.value.trim() || '[Isi Username / Link Target]';
+                const notes = notesInput.value.trim() || '-';
+
+                return `Halo Kak Raka, saya mau order BOOST ALL SOSMED:\n` +
+                       `• Layanan: ${service}\n` +
+                       `• Platform: ${platform}\n` +
+                       `• Jumlah/Paket: ${amount}\n` +
+                       `• Target: ${target}\n` +
+                       `• Catatan: ${notes}\n` +
+                       `Alur: TF ➢ BUKTI TF ➢ LINK SOSMED ➢ PROSES`;
+            }
+
+            function updatePreview() {
+                orderPreview.textContent = generateOrderText();
+            }
+
+            [serviceSelect, platformSelect, amountInput, targetInput, notesInput].forEach(el => {
+                el.addEventListener('input', updatePreview);
+                el.addEventListener('change', updatePreview);
+            });
+
+            updatePreview();
+
+            function copyTextToClipboard(text) {
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-9999px';
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    return true;
+                } catch (err) {
+                    return false;
+                } finally {
+                    document.body.removeChild(textArea);
+                }
+            }
+
+            let toastTimeout;
+            function showToast(title, message) {
+                const toast = document.getElementById('toast-notification');
+                document.getElementById('toast-title').textContent = title;
+                document.getElementById('toast-message').textContent = message;
+
+                toast.classList.remove('translate-y-24', 'opacity-0');
+                toast.classList.add('translate-y-0', 'opacity-100');
+
+                clearTimeout(toastTimeout);
+                toastTimeout = setTimeout(() => {
+                    toast.classList.remove('translate-y-0', 'opacity-100');
+                    toast.classList.add('translate-y-24', 'opacity-0');
+                }, 4000);
+            }
+
+            copyFormatBtn.addEventListener('click', () => {
+                const text = generateOrderText();
+                if (copyTextToClipboard(text)) {
+                    showToast('Format Tersalin!', 'Format order berhasil disalin ke clipboard.');
+                }
+            });
+
+            orderForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const text = generateOrderText();
+                copyTextToClipboard(text);
+                showToast('Mengarahkan ke WhatsApp!', 'Format order disalin & membuka chat WhatsApp 0831-1450-1335...');
+
+                const encodedText = encodeURIComponent(text);
+                setTimeout(() => {
+                    window.open(`https://wa.me/6283114501335?text=${encodedText}`, '_blank', 'noopener,noreferrer');
+                }, 600);
+            });
+
+            window.copyPaymentNumber = function(number, provider) {
+                if (copyTextToClipboard(number)) {
+                    showToast(`Nomor ${provider} Tersalin!`, `Nomor ${number} (JEFRENO LIONEL RAKA) berhasil disalin.`);
+                }
+            };
+        });
+
+        function selectServiceAndScroll(serviceName) {
+            const serviceSelect = document.getElementById('service-type');
+            serviceSelect.value = serviceName;
+            serviceSelect.dispatchEvent(new Event('change'));
+
+            const orderSection = document.getElementById('order-form-section');
+            if (orderSection) {
+                orderSection.scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => {
+                    document.getElementById('order-amount')?.focus();
+                }, 550);
+            }
+        }
+
+        function scrollToOrderForm(event) {
+            if (event) event.preventDefault();
+            const orderSection = document.getElementById('order-form-section');
+            if (orderSection) {
+                orderSection.scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => {
+                    document.getElementById('order-amount')?.focus();
+                }, 550);
+            }
+        }
+
+        function toggleRulesModal(show) {
+            const modal = document.getElementById('rules-modal');
+            if (!modal) return;
+            if (show) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            } else {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        }
+
+        document.getElementById('rules-modal')?.addEventListener('click', (e) => {
+            if (e.target.id === 'rules-modal') {
+                toggleRulesModal(false);
+            }
+        });
+    </script>
+</body>
+</html>
